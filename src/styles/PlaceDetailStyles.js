@@ -37,6 +37,26 @@ export default StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
   },
+  favoriteButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 12,
+    borderRadius: 10,
+    marginTop: 15,
+  },
+  addButton: {
+    backgroundColor: "#27ae60",
+  },
+  removeButton: {
+    backgroundColor: "#c0392b",
+  },
+  favoriteButtonText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#fff",
+    marginLeft: 10,
+  },
   websiteButton: {
     backgroundColor: "#3498db",
     paddingVertical: 14,
