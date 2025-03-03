@@ -1,0 +1,78 @@
+import { StyleSheet } from "react-native";
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingHorizontal: 20,
+    backgroundColor: "#ecf0f1",
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: "bold",
+    textAlign: "left",
+    marginTop: 50,
+    marginBottom: 15,
+    color: "#2c3e50",
+    letterSpacing: 1.5,
+  },
+  dropdownContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 25,
+  },
+  dropdown: {
+    flex: 1,
+    backgroundColor: "#fff",
+    padding: 15,
+    borderRadius: 12,
+    marginHorizontal: 8,
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#dcdcdc",
+    shadowColor: "#bdc3c7",
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 5,
+  },
+  dropdownText: {
+    fontSize: 18,
+    color: "#2c3e50",
+    fontWeight: "600",
+  },
+  placeItem: {
+    backgroundColor: "#ffffff",
+    padding: 18,
+    borderRadius: 15,
+    marginBottom: 15,
+    shadowColor: "#2c3e50",
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    elevation: 6,
+  },
+  placeName: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#2980b9",
+    marginBottom: 5,
+  },
+  placeAddress: {
+    fontSize: 16,
+    color: "#7f8c8d",
+  },
+  favoritesButton: {
+    backgroundColor: "#f39c12",
+    padding: 14,
+    borderRadius: 12,
+    alignItems: "center",
+    marginTop: 20,
+    shadowColor: "#f39c12",
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+  favoritesButtonText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#fff",
+  },
+});
