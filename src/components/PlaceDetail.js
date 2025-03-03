@@ -29,10 +29,10 @@ const PlaceDetail = ({ placeId }) => {
       <Text style={styles.detail}>
         📞 Teléfono Internacional: {place.international_phone_number}
       </Text>
-      <WebsiteButton website={place.website} label="🌍 Visitar Sitio Web" />
+      <WebsiteButton website={place.website} label="Visitar Sitio Web" />
       {place.sources.length > 0 && (
         <View>
-          <Text style={styles.subTitle}>🔗 Fuentes:</Text>
+          <Text style={styles.subTitle}>Paginas oficiales:</Text>
           {place.sources.map((source, index) => (
             <WebsiteButton
               key={index}

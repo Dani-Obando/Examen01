@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity, Text, Linking } from "react-native";
 import styles from "../styles/PlaceDetailStyles";
 
-const WebsiteButton = ({ website, label = "🌍 Visitar Sitio Web" }) => {
+const WebsiteButton = ({ website, label = "Visitar Sitio Web" }) => {
   return (
     <TouchableOpacity
       style={styles.websiteButton}
