@@ -8,7 +8,7 @@ import CityCategorySelector from "../components/CityCategorySelector";
 import PlaceItem from "../components/PlaceItem";
 import LoadingIndicator from "../components/LoadingIndicator";
 
-const CITIES = ["Amsterdam", "Barcelona", "Berlin", "Dubai", "London", "Paris"];
+const CITIES = ["Amsterdam", "Barcelona", "Berlin", "Dubai", "London", "Paris", "Rome", "Tuscany"];
 const CATEGORIES = ["accommodation", "attraction", "poi", "restaurant"];
 
 const HomeView = ({ navigation }) => {
@@ -31,7 +31,7 @@ const HomeView = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Explora Lugares Turísticos</Text>
+      <Text style={styles.title}>Explore Tourist Places</Text>
 
       <CityCategorySelector
         selectedCity={selectedCity}

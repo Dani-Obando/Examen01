@@ -24,15 +24,15 @@ const PlaceDetail = ({ placeId }) => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>{place.name}</Text>
-      <Text style={styles.detail}>📍 Dirección: {place.address}</Text>
-      <Text style={styles.detail}>📞 Teléfono: {place.phone_number}</Text>
+      <Text style={styles.detail}>📍 Address: {place.address}</Text>
+      <Text style={styles.detail}>📞 Phone: {place.phone_number}</Text>
       <Text style={styles.detail}>
-        📞 Teléfono Internacional: {place.international_phone_number}
+        📞 International Phone: {place.international_phone_number}
       </Text>
-      <WebsiteButton website={place.website} label="Visitar Sitio Web" />
+      <WebsiteButton website={place.website} label="Visit Website" />
       {place.sources.length > 0 && (
         <View>
-          <Text style={styles.subTitle}>Paginas oficiales:</Text>
+          <Text style={styles.subTitle}>Official Pages:</Text>
           {place.sources.map((source, index) => (
             <WebsiteButton
               key={index}

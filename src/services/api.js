@@ -22,11 +22,11 @@ export const getPlaceDetails = async (id) => {
     return {
       name: data.name,
       address: data.address,
-      phone_number: data.phone_number || "No disponible",
+      phone_number: data.phone_number || "Not available",
       international_phone_number:
-        data.international_phone_number || "No disponible",
-      website: data.website || "No disponible",
-      opening_hours: data.opening_hours || "No disponible",
+        data.international_phone_number || "Not available",
+      website: data.website || "Not available",
+      opening_hours: data.opening_hours || "Not available",
       sources: Object.entries(data.external_urls || {})
         .filter(([key, value]) => value)
         .map(([key, value]) => ({ source: key, url: value })),

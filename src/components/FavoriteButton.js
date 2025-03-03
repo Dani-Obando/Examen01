@@ -13,10 +13,10 @@ const FavoriteButton = ({ place }) => {
   const handlePress = () => {
     if (isFavorite) {
       dispatch(removeFavorite(place.id));
-      Alert.alert("Eliminado", "Lugar eliminado de favoritos.");
+      Alert.alert("Removed", "Place removed from favorites.");
     } else {
       dispatch(addFavorite(place));
-      Alert.alert("¡Éxito!", "Lugar agregado a favoritos.");
+      Alert.alert("Success!", "Place added to favorites.");
     }
   };
 
@@ -27,7 +27,7 @@ const FavoriteButton = ({ place }) => {
     >
       <Icon name={isFavorite ? "trash-outline" : "star-outline"} size={20} color="#fff" />
       <Text style={styles.favoriteButtonText}>
-        {isFavorite ? "Eliminar de Favoritos" : "Agregar a Favoritos"}
+        {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
       </Text>
     </TouchableOpacity>
   );
