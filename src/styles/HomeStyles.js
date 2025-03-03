@@ -33,8 +33,6 @@ export default StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 6,
     elevation: 6,
-    transform: [{ scale: 1 }],
-    transition: "transform 0.3s ease-in-out",
   },
   dropdownText: {
     fontSize: 18,
@@ -50,8 +48,6 @@ export default StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 10,
     elevation: 8,
-    transform: [{ scale: 1 }],
-    transition: "transform 0.3s ease-in-out",
   },
   placeName: {
     fontSize: 22,
@@ -121,5 +117,18 @@ export default StyleSheet.create({
     fontSize: 16,
     color: "#fff",
     fontWeight: "bold",
+  },
+  searchInput: {
+    height: 45,
+    borderColor: "#ccc",
+    borderWidth: 1,
+    borderRadius: 12,
+    paddingLeft: 12,
+    marginBottom: 20,
+    backgroundColor: "#fff",
+    shadowColor: "#bdc3c7",
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 5,
   },
 });

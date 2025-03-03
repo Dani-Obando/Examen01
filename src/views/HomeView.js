@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, FlatList } from "react-native";
+import { View, Text, FlatList, TextInput } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { setPlaces } from "../redux/placesSlice";
 import { getPlaces } from "../services/api";
@@ -14,6 +14,7 @@ const CATEGORIES = ["accommodation", "attraction", "poi", "restaurant"];
 const HomeView = ({ navigation }) => {
   const [selectedCity, setSelectedCity] = useState("Barcelona");
   const [selectedCategory, setSelectedCategory] = useState("attraction");
+  const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const places = useSelector((state) => state.places.list);
@@ -29,9 +30,14 @@ const HomeView = ({ navigation }) => {
     setLoading(false);
   };
 
+
+  const filteredPlaces = places.filter((place) =>
+    place.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Explore Tourist Places</Text>
+      <Text style={styles.title}>Search tourist places</Text>
 
       <CityCategorySelector
         selectedCity={selectedCity}
@@ -42,11 +48,19 @@ const HomeView = ({ navigation }) => {
         CATEGORIES={CATEGORIES}
       />
 
+      {/* Campo de búsqueda */}
+      <TextInput
+        style={styles.searchInput}
+        placeholder="Search place by name..."
+        value={searchQuery}
+        onChangeText={setSearchQuery}
+      />
+
       {loading ? (
         <LoadingIndicator />
       ) : (
         <FlatList
-          data={places}
+          data={filteredPlaces}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => (
             <PlaceItem item={item} navigation={navigation} />
