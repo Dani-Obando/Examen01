@@ -51,8 +51,9 @@ export default function AppNavigator() {
           tabBarInactiveTintColor: "gray",
         })}
       >
-        <Tab.Screen name="HomeTab" component={HomeStack} options={{ title: "Inicio" }} />
-        <Tab.Screen name="FavoritesTab" component={FavoritesStack} options={{ title: "Favoritos" }} />
+        <Tab.Screen name="HomeTab" component={HomeStack} options={{ title: "Home" }} />
+        <Tab.Screen name="FavoritesTab" component={FavoritesStack} options={{ title: "Favorites" }} />
+
       </Tab.Navigator>
     </NavigationContainer>
   );

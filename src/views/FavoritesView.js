@@ -8,9 +8,9 @@ const FavoritesView = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Mis Lugares Favoritos</Text>
+      <Text style={styles.title}>My Favorite Places</Text>
       {favorites.length === 0 ? (
-        <Text style={styles.emptyMessage}>No tienes favoritos aún.</Text>
+        <Text style={styles.emptyMessage}>You don't have any favorites yet.</Text>
       ) : (
         <FlatList
           data={favorites}
